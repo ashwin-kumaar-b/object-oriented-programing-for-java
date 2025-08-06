@@ -1,0 +1,47 @@
+class Author {
+    String name;
+    Author(String name) { this.name = name; }
+}
+
+class Book {
+    static int count = 0;
+    int id;
+    String title;
+    Author author;
+
+    Book(String title, Author author) {
+        this.id = ++count;
+        this.title = title;
+        this.author = author;
+    }
+
+    void show() {
+        System.out.println("Book #" + id + ": " + title + " by " + author.name);
+    }
+}
+
+class Member {
+    static int count = 0;
+    int id;
+    String name;
+
+    Member(String name) {
+        this.id = ++count;
+        this.name = name;
+    }
+
+    void show() {
+        System.out.println("Member #" + id + ": " + name);
+    }
+}
+
+public class LibrarySystem {
+    public static void main(String[] args) {
+        Author a = new Author("George Orwell");
+        Book b = new Book("1984", a);
+        Member m = new Member("Alice");
+
+        b.show();
+        m.show();
+    }
+}
