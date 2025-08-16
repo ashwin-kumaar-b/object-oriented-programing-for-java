@@ -1,1 +1,20 @@
 
+public class RangeSum {
+
+    // Function to calculate sum of numbers from start to end
+    public static int sumRange(int start, int end) {
+        int sum = 0;
+        for (int i = start; i <= end; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Sum 1-100: " + sumRange(1, 100));
+        System.out.println("Sum 1-50 : " + sumRange(1, 50));
+        System.out.println("Sum 1-10 : " + sumRange(1, 10));
+        System.out.println("Sum 50-100: " + sumRange(50, 100));
+        System.out.println("Sum 1-1  : " + sumRange(1, 1));
+    }
+}
